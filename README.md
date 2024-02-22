@@ -1,2 +1,2 @@
 # trialbyfire-v2
-a simple html site deloyed over github pages!
+A simple website site this is deloyed over github pages!
