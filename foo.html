@@ -4,21 +4,47 @@
     }
 </style>
 
-<h1>Foo Page</h1>
+<h1>My Blog</h1>
 
+<section id="blog-articles">
+    <article>
+        <h2 class="red-heading">Explaining food, bar, baz, and lorum ipsum</h2>
+        <p>Foo, bar and baz are random nonsense words that developers frequently use to create code examples.</p>
 
-<article>
-    <h2 class="red-heading">Bar Section</h2>
-    <p>Foo, bar and baz are random nonsense words that developers frequently use to create code examples.</p>
-</article>
+        <p>Another common pattern, or idiom, is the concept of "Lorem Ipsum text."
 
+            Read more about Lorem Ipsum <a
+                href="https://en.wikipedia.org/wiki/Lorem_ipsum" target="_blank"> here on Wikipedia!
+            </a>
+        </p>
+    </article>
+</section>
 
-<article>
-    <h2 class="red-heading">Baz Section</h2>
-    <p>Another common pattern, or idiom, is the concept of "Lorem Ipsum text."
+<section id="create-new-blog-article">
+    <form id="new-article-form">
+        <div class="form-group">
+            <label for="article-title">Artcle Title:</label>
+            <input name="article-title" type="text" id="article" required/>
+        </div>
+        <div class="form-group">
+            <label for="article-content">Content:</label>
+            <textarea name="article-content" id="article-content" required></textarea>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Submit Artcile"/>
+        </div>
+    </form>
 
-        Read more about Lorem Ipsum <a
-            href="https://en.wikipedia.org/wiki/Lorem_ipsum" target="_blank"> here on Wikipedia!
-        </a>
-    </p>
-</article>
+</section>
+
+<form>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="message">Message:</label><br>
+    <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+
+    <input type="submit" value="Submit">
