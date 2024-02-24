@@ -1,57 +1,63 @@
-<style>
-    .red-heading {
-        color:red;
-    }
-</style>
+<html>
+    <head>
+        <style>
+            .red-heading {
+                color:red;
+            }
+        </style>
+</head>
 
-<h1>My Blog</h1>
+<body>
+    <h1>My Blog</h1>
 
-<section id="blog-articles">
-    <article>
-        <h2 class="red-heading">Explaining food, bar, baz, and lorum ipsum</h2>
-        <p>Foo, bar and baz are random nonsense words that developers frequently use to create code examples.</p>
+    <section id="blog-articles">
+        <article>
+            <h2 class="red-heading">Explaining food, bar, baz, and lorum ipsum</h2>
+            <p>Foo, bar and baz are random nonsense words that developers frequently use to create code examples.</p>
 
-        <p>Another common pattern, or idiom, is the concept of "Lorem Ipsum text."
+            <p>Another common pattern, or idiom, is the concept of "Lorem Ipsum text."
 
-            Read more about Lorem Ipsum <a
-                href="https://en.wikipedia.org/wiki/Lorem_ipsum" target="_blank"> here on Wikipedia!
-            </a>
-        </p>
-    </article>
-</section>
+                Read more about Lorem Ipsum <a
+                    href="https://en.wikipedia.org/wiki/Lorem_ipsum" target="_blank"> here on Wikipedia!
+                </a>
+            </p>
+        </article>
+    </section>
 
-<section id="create-new-blog-article">
-    <form id="new-article-form">
-        <div class="form-group">
-            <label for="article-title">Artcle Title:</label>
-            <input name="article-title" type="text" id="article" required/>
-        </div>
-        <div class="form-group">
-            <label for="article-content">Content:</label>
-            <textarea name="article-content" id="article-content" required></textarea>
-        </div>
-        <div class="form-group">
-            <input type="submit" value="Submit Article"/>
-        </div>
-    </form>
-</section>
-<script>
-    // Function to handle form submission
-    document.getElementById('new-article-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent form submission
+    <section id="create-new-blog-article">
+        <form id="new-article-form">
+            <div class="form-group">
+                <label for="article-title">Artcle Title:</label>
+                <input name="article-title" type="text" id="article" required/>
+            </div>
+            <div class="form-group">
+                <label for="article-content">Content:</label>
+                <textarea name="article-content" id="article-content" required></textarea>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Submit Article"/>
+            </div>
+        </form>
+    </section>
+    <script>
+        // Function to handle form submission
+        document.getElementById('new-article-form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent form submission
 
-    // Get user input values
-    let title = document.getElementById('article-title').value;
-    let content = document.getElementById('article-content').value;
+        // Get user input values
+        let title = document.getElementById('article-title').value;
+        let content = document.getElementById('article-content').value;
 
-    // Create a new article element
-    let article = document.createElement('article');
-    article.innerHTML = '<h2 class="red-heading">' + title + '</h2><p>' + content + '</p>';
+        // Create a new article element
+        let article = document.createElement('article');
+        article.innerHTML = '<h2 class="red-heading">' + title + '</h2><p>' + content + '</p>';
 
-    // Add the new article to the blog section
-    document.getElementById('blog-articles').appendChild(article);
+        // Add the new article to the blog section
+        document.getElementById('blog-articles').appendChild(article);
 
-    // Clear form fields
-    document.getElementById('new-article-form').reset();
-  });
-</script>
+        // Clear form fields
+        document.getElementById('new-article-form').reset();
+    });
+    </script>
+</body>
+</html>
