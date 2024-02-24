@@ -12,7 +12,7 @@
 
     <section id="blog-articles">
         <article>
-            <h2 class="red-heading">Explaining food, bar, baz, and lorum ipsum</h2>
+            <h2 class="red-heading">Explaining foo, bar, baz, and lorum ipsum</h2>
             <p>Foo, bar and baz are random nonsense words that developers frequently use to create code examples.</p>
 
             <p>Another common pattern, or idiom, is the concept of "Lorem Ipsum text."
@@ -45,11 +45,11 @@
         event.preventDefault(); // Prevent form submission
 
         // Get user input values
-        let title = document.getElementById('article-title').value;
-        let content = document.getElementById('article-content').value;
+        var title = document.getElementById('article-title').value;
+        var content = document.getElementById('article-content').value;
 
         // Create a new article element
-        let article = document.createElement('article');
+        var article = document.createElement('article');
         article.innerHTML = '<h2 class="red-heading">' + title + '</h2><p>' + content + '</p>';
 
         // Add the new article to the blog section
