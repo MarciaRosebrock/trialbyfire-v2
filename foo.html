@@ -31,8 +31,27 @@
             <textarea name="article-content" id="article-content" required></textarea>
         </div>
         <div class="form-group">
-            <input type="submit" value="Submit Artcile"/>
+            <input type="submit" value="Submit Article"/>
         </div>
     </form>
-
 </section>
+<script>
+    // Function to handle form submission
+    document.getElementById('new-article-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent form submission
+
+    // Get user input values
+    let title = document.getElementById('article-title').value;
+    let content = document.getElementById('article-content').value;
+
+    // Create a new article element
+    let article = document.createElement('article');
+    article.innerHTML = '<h2 class="red-heading">' + title + '</h2><p>' + content + '</p>';
+
+    // Add the new article to the blog section
+    document.getElementById('blog-articles').appendChild(article);
+
+    // Clear form fields
+    document.getElementById('new-article-form').reset();
+  });
+</script>
